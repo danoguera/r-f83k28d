@@ -1,23 +1,13 @@
 import React, { Component } from 'react';
+import Counter from './components/Counter'
 import './App.css';
 
-class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-      counter: 0
-    }
-  }
-
-  handleClick = () => {
-    this.setState({ counter: this.state.counter + 1 });
-  }
+class App extends React.Component {
 
   render() {
     return (
       <div>
-        <span className="value">{this.state.counter}</span>
-        <button id="inc" onClick={this.handleClick}>Incrementa</button>
+        <Counter />
       </div>
     );
   }
